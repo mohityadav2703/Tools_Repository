@@ -1,0 +1,5 @@
+DEBUG - DEBUG priority method is used to print message with data or print final result like : Mohit id :101
+INFO - INFO priority method is used to print simple message like connection create, email sent...etc
+WARN - WARN priority method is used to print Warning message like resource not close, local variable not used...etc
+ERROR - ERROR priority method is used to print exception message like : nullpointerexception, arrayIndex...etc
+FATAL - FATAL priority method is used to print high level problem like : server down, network break...etc

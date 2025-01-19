@@ -1,0 +1,5 @@
+2025-01-19 22:05:03 [DEBUG] com.log4j.app.Product7 - DEBUG priority method is used to print message with data or print final result like : Mohit id :101
+2025-01-19 22:05:03 [INFO] com.log4j.app.Product7 - INFO priority method is used to print simple message like connection create, email sent...etc
+2025-01-19 22:05:03 [WARN] com.log4j.app.Product7 - WARN priority method is used to print Warning message like resource not close, local variable not used...etc
+2025-01-19 22:05:03 [ERROR] com.log4j.app.Product7 - ERROR priority method is used to print exception message like : nullpointerexception, arrayIndex...etc
+2025-01-19 22:05:03 [FATAL] com.log4j.app.Product7 - FATAL priority method is used to print high level problem like : server down, network break...etc

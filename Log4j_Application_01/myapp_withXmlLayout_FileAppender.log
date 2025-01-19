@@ -1,0 +1,20 @@
+<log4j:event logger="com.log4j.app.Product6" timestamp="1737303396814" level="DEBUG" thread="main">
+<log4j:message><![CDATA[DEBUG priority method is used to print message with data or print final result like : Mohit id :101]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.log4j.app.Product6" timestamp="1737303396826" level="INFO" thread="main">
+<log4j:message><![CDATA[INFO priority method is used to print simple message like connection create, email sent...etc]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.log4j.app.Product6" timestamp="1737303396826" level="WARN" thread="main">
+<log4j:message><![CDATA[WARN priority method is used to print Warning message like resource not close, local variable not used...etc]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.log4j.app.Product6" timestamp="1737303396827" level="ERROR" thread="main">
+<log4j:message><![CDATA[ERROR priority method is used to print exception message like : nullpointerexception, arrayIndex...etc]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.log4j.app.Product6" timestamp="1737303396827" level="FATAL" thread="main">
+<log4j:message><![CDATA[FATAL priority method is used to print high level problem like : server down, network break...etc]]></log4j:message>
+</log4j:event>
+
