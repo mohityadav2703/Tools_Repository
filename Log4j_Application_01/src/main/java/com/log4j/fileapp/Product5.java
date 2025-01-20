@@ -1,18 +1,18 @@
-package com.log4j.app;
+package com.log4j.fileapp;
 
 import org.apache.log4j.Appender;
 import org.apache.log4j.FileAppender;
+import org.apache.log4j.HTMLLayout;
 import org.apache.log4j.Layout;
 import org.apache.log4j.Logger;
-import org.apache.log4j.xml.XMLLayout;
 
-public class Product6 {
+public class Product5 {
 
-	private static Logger log = Logger.getLogger(Product6.class);
-	
-	public static void main(String[] args) throws Exception{
-		Layout layout = new XMLLayout();
-		Appender appender = new FileAppender(layout,"myapp_withXmlLayout_FileAppender.log");
+	private static Logger log = Logger.getLogger(Product5.class);
+	public static void main(String[] args) throws Exception {
+		
+		Layout layout = new HTMLLayout();
+		Appender appender = new FileAppender(layout,"myapp_with_htmllayoutandfileappender.log",true);
 		log.addAppender(appender);
 		
 		log.debug("DEBUG priority method is used to print message with data or print final result like : Mohit id :101");

@@ -1,23 +1,24 @@
 /**
  * 	appender : ConsoleAppender
- * 	Layout	 : XmlLayout
+ * 	Layout	 : PatternLayout
  */
 
-package com.log4j.app;
+
+package com.log4j.consoleapp;
 
 import org.apache.log4j.Appender;
 import org.apache.log4j.ConsoleAppender;
 import org.apache.log4j.Layout;
 import org.apache.log4j.Logger;
-import org.apache.log4j.xml.XMLLayout;
+import org.apache.log4j.PatternLayout;
 
-public class Product2 {
+public class Product3 {
+
+	private static Logger log = Logger.getLogger(Product3.class);
 	
-	private static Logger log = Logger.getLogger(Product2.class);
-
 	public static void main(String[] args) {
 		
-		Layout layout = new XMLLayout();
+		Layout layout = new PatternLayout();
 		Appender appender = new ConsoleAppender(layout);
 		log.addAppender(appender);
 		
@@ -27,6 +28,7 @@ public class Product2 {
 		log.warn("WARN priority method is used to print Warning message like resource not close, local variable not used...etc");
 		log.error("ERROR priority method is used to print exception message like : nullpointerexception, arrayIndex...etc");
 		log.fatal("FATAL priority method is used to print high level problem like : server down, network break...etc");
+
 	}
 
 }

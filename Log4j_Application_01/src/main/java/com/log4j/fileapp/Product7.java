@@ -1,4 +1,4 @@
-package com.log4j.app;
+package com.log4j.fileapp;
 
 import org.apache.log4j.Appender;
 import org.apache.log4j.FileAppender;
