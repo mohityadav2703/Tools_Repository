@@ -1,12 +1,13 @@
-package com.redis;
+package com.kafka;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringbootRedisCacheApplication {
+public class SpringbootKafkaProducerAppApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringbootRedisCacheApplication.class, args);
+		SpringApplication.run(SpringbootKafkaProducerAppApplication.class, args);
 	}
+
 }

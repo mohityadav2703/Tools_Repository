@@ -1,6 +1,7 @@
 package com.redis.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.RedisConnectionFailureException;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -13,17 +14,22 @@ import com.redis.repo.StudentRepository;
 public class StudentController {
 	
 	@Autowired
-	private StudentRepository studentRepo;
+	private StudentRepository srepo;
 	
-	@PostMapping("/student")
-	public String addStudent(@RequestBody Student student) {
-		studentRepo.save(student);
-		return "Student Saved";
-	}
-
 	@GetMapping("/students")
 	public Iterable<Student> getAllStudents(){
-		return studentRepo.findAll();
+		return srepo.findAll();
 	}
 	
+	@PostMapping("/student")
+    public String addStudent(@RequestBody Student student) {
+        try {
+            srepo.save(student);
+            return "Student Saved";
+        } catch (RedisConnectionFailureException e) {
+            return "Error: Unable to connect to Redis. Please check your Redis server.";
+        } catch (Exception e) {
+            return "Error: " + e.getMessage();
+        }
+    }
 }
